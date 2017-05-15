@@ -15,7 +15,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[smb1server_controlremediate::default]
+      - recipe[disable_smb1server_controlremediate::default]
     verifier:
       inspec_tests:
         - test/recipes

@@ -1,18 +1,17 @@
 #
-# Cookbook Name:: smb1server_controlremediate
+# Cookbook Name:: disable_smb1server_controlremediate
 # Recipe:: default
 #
-# Copyright 2017 The Authors
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
+return unless node['platform_family'] == 'windows'
+
+# Enforce the disabling of SMB1
+
+registry_key 'HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters' do
+  values [{
+    name: 'SMB1',
+    type: :dword,
+    data: 0
+  }]
+  action :create_if_missing
+end

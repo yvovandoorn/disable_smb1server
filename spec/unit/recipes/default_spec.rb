@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: smb1server_controlremediate
+# Cookbook Name:: disable_smb1server_controlremediate
 # Spec:: default
 #
 # Copyright 2017 The Authors
@@ -19,7 +19,7 @@
 
 require 'spec_helper'
 
-describe 'smb1server_controlremediate::default' do
+describe 'disable_smb1server_controlremediate::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       runner = ChefSpec::ServerRunner.new
