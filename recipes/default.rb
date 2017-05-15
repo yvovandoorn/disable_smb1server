@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: disable_smb1server_controlremediate
+# Cookbook Name:: disable_smb1server
 # Recipe:: default
 #
 

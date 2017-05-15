@@ -1,4 +1,4 @@
-# disable_smb1server_controlremediate
+# disable_smb1server
 
 With the release of yet another malware attack, the SMB1 protocol is causing more damage than good.
 
